@@ -25,8 +25,8 @@ class ThemeRequest(BaseModel):
 
 @app.post("/generate-outline")
 def generate_outline(request: TopicRequest):
-    outline, verses = generate_sermon_outline(request.topic)
-    return {"outline": outline, "verses": verses}
+    outline, detected_language = generate_sermon_outline(request.topic)
+    return {"outline": outline, "language": detected_language}
 
 @app.post("/find-verses")
 def get_verses(request: ThemeRequest):

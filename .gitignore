@@ -46,10 +46,43 @@ coverage/
 # 🔹 Build & Deployment Artifacts
 /dist/
 /build/
-/.cache/
+/cache/
 /.parcel-cache/
 
 # 🔹 Git-ignored Environment Configurations
+.env
+.env.*
 .env.production
 .env.development
 .env.testing
+.env.local
+/config.json
+/config/*.json
+/secrets/
+secrets.json
+
+# 🔹 Database & Virtual Environments
+*.sqlite3
+db.sqlite3
+migrations/
+instance/
+*.db
+*.sql
+
+# 🔹 React Build Artifacts
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+
+# 🔹 Backend Dependencies
+backend/venv/
+backend/.venv/
+backend/__pycache__/
+backend/migrations/
+
+# 🔹 Ignore AWS, Google Cloud, and SSH Credentials
+*.pem
+*.crt
+*.key
+*.p12
+*.enc
